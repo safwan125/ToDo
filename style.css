@@ -1,0 +1,292 @@
+:root{
+    --bg: #F9F9F9;
+    --primary: #333333;
+    --secondary: #4A4A4A;
+    --tertiary: #333333;
+    --accent: #FF6B6B;
+    --text: #D1D1D1;
+}
+
+.dark3 {
+    --bg: #1B1A17;
+    --primary: #2E2A24;
+    --secondary: #4B4A47;
+    --tertiary: #E4DCCF;
+    --accent: #FF8C42;
+    --text: #E4DCCF;
+}
+
+.light3 {
+    --bg: #F3EFE0;
+    --primary: #2D2C2A;
+    --secondary: #6E665A;
+    --tertiary: #3B3A39;
+    --accent: #FF702A;
+    --text: #7A7A7A;
+}
+
+.dark {
+    --bg: #121212;
+    --primary: #282828;
+    --secondary: #4D7EA8;
+    --tertiary: #E8E9EB;
+    --accent: #6B93FF;
+    --text: #E8E9EB;
+}
+.light {
+    --bg: #FFFFFF;
+    --primary: #222831;
+    --secondary: #3A3A3A;
+    --tertiary: #2D2D2D;
+    --accent: #5673FF;
+    --text: #7F8C8D;
+}
+
+
+/* theme2 */
+.dark2 {
+    --bg: #181A1B;
+    --primary: #24292E;
+    --secondary: #3A6351;
+    --tertiary: #D6D6D6;
+    --accent: #57CC99;
+    --text: #EDEDED;
+}
+
+
+.light2 {
+    --bg: #F7F7F7;
+    --primary: #2E3236;
+    --secondary: #2D5A4A;
+    --tertiary: #3C3F41;
+    --accent: #4FB286;
+    --text: #606060;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    color: var(--text);
+}
+
+body{
+    min-height: 100vh;
+    padding: 10px;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accent);
+}
+
+.main-box{
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#task-input{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary);
+    border-radius: 1000px;
+    font: inherit;
+    color: var(--tertiary);
+    caret-color: var(--accent);
+}
+
+#task-input:focus{
+    outline: none;
+}
+
+form{
+    position: relative;
+}
+
+#add-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent);
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--bg);
+    cursor: pointer;
+}
+
+.todo{
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.todo .todo-text{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+}
+
+.delete{
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete svg{
+    transition: 250ms ease;
+}
+
+.delete:hover svg{
+    fill: #ff0033;
+}
+
+.custom-checkbox{
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    background-color: var(--accent);
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    fill: var(--primary);
+}
+
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: var(--secondary);
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+@media(max-width: 500px) {
+    html{
+        font-size: 12pt;
+    }
+    #add-button{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    h1{
+        margin-top: 50px;
+        font-size: 15vw;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--accent);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}

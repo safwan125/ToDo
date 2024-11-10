@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+</head>
+<body class="">
+    <nav class="navbar">
+        <div class="navbar-logo">ToDo</div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="dropdown-button">Theme ▾</button>
+            <div class="dropdown-menu">
+                <a href="#" onclick="changeTheme('light')">Light</a>
+                <a href="#" onclick="changeTheme('dark')">Dark</a>
+                <a href="#" onclick="changeTheme('light2')">Light2</a>
+                <a href="#" onclick="changeTheme('dark2')">Dark2</a>
+                <a href="#" onclick="changeTheme('light3')">Light3</a>
+                <a href="#" onclick="changeTheme('dark3')">Dark3</a>
+            </div>
+        </div>
+    </nav>
+    <h1></h1>
+    <div class="main-box">
+        <form>
+            <input id="task-input" type="text" placeholder="Enter your task..." autocomplete="off">
+            <button id="add-button">ADD</button>
+        </form>
+        <ul id="todo-list">
+            <li class="todo">
+                <input type="checkbox" id="todo-1">
+                <label for="todo-1" class="custom-checkbox">
+                    <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                </label>
+                <label for="todo-1" class="todo-text">TODO app project...</label>
+                <button class="delete">
+                    <svg fill="var(--secondary)" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                </button>
+            </li>
+        
+            <li class="todo">
+                <input type="checkbox" id="todo-2">
+                <label for="todo-2" class="custom-checkbox">
+                    <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                </label>
+                <label for="todo-2" class="todo-text">Another TODO item...</label>
+                <button class="delete">
+                    <svg fill="var(--secondary)" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                </button>
+            </li>
+        </ul>
+        
+              
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
