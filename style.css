@@ -69,7 +69,7 @@
 }
 
 html{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16pt;
     color: var(--text);
 }
@@ -151,6 +151,14 @@ form{
     padding: 15px;
     padding-right: 0;
     flex-grow: 1;
+    cursor: pointer;
+    transition: 1000ms ease;
+}
+
+.todo .todo-text:hover{
+    
+    color: var(--secondary);
+    transition: 1250ms ease;
 }
 
 .delete{
@@ -182,6 +190,11 @@ form{
     flex-shrink: 0;
     transition: 200ms ease;
     cursor: pointer;
+}
+
+.custom-checkbox svg:hover{
+    fill: var(--secondary);
+    transition: 500ms ease;
 }
 
 input[type="checkbox"]:checked ~ .custom-checkbox{
